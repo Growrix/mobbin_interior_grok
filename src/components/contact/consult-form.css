@@ -1,0 +1,42 @@
+.an-consult-form {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.an-consult-form__grid {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.an-consult-form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.an-form-banner {
+  margin: 0;
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+}
+
+.an-form-banner.is-success {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.an-form-banner.is-error {
+  background: var(--color-error-bg);
+  color: var(--color-error);
+}
+
+@media (min-width: 768px) {
+  .an-consult-form__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .an-consult-form__grid > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
